@@ -274,10 +274,10 @@ def load_word2id(word2id_path, domain):
 
 
 def load_word2vector(word2id_path, domain):
-    with pymongo.MongoClient() as conn:
-        conn['admin'].authenticate('root', 'SELECT * FROM password;')
-    # with pymongo.MongoClient("mongodb://localhost:27017/") as conn:
-        # or set to your custom-built mongo client
+    # with pymongo.MongoClient() as conn:
+    #     conn['admin'].authenticate('root', 'your password')
+    with pymongo.MongoClient("mongodb://localhost:27017/") as conn:
+        # TODO: or set to your custom-built mongo client
         # # from mongoDB
         # db = conn['sen']
         # coll_vocab = db['vocab_noisy']
